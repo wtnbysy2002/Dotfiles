@@ -1,3 +1,14 @@
+call plug#begin()
+"ここにプラグインを書く
+Plug 'Shougo/dein.vim' "プラグインマネージャ。バージョン管理とか？
+Plug 'Shougo/deoplete.nvim' "補完機能
+Plug 'eclipse/eclipse.jdt.ls' "javaのIDE風にする
+Plug 'autozimi/LanguageClient-neovim' "コード補完、フォーマット、シンタックスチェック、ドキュメント表示、定義元ジャンプ等々
+Plug 'w0rp/ale' "非同期のシンタックスチェック
+Plug '' "a
+Plug '' "a
+Plug '' "a
+call plug#end()
 
 set encoding=utf-8
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
