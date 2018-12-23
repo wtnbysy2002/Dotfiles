@@ -10,17 +10,9 @@ Plug 'Shougo/neocomplcache.vim' "補完機能
 Plug 'Shougo/neosnippet.vim' "スニペット補完機能
 Plug 'artur-shaik/vim-javacomplete2' "omni補完 <C-x><C-o>
 Plug 'eclipse/eclipse.jdt.ls' "javaのIDE風にする
-Plug 'autozimu/LanguageClient-neovim',{
-	\ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-"コード補完、フォーマット、シンタックスチェック、ドキュメント表示、定義元ジャンプ等々
-
 Plug 'w0rp/ale' "非同期のシンタックスチェック
 Plug 'thinca/vim-quickrun' "/rと打つとコンパイルしてくれる
 Plug 'tpope/vim-surround' "括弧とかクォーテーションのサポート
-Plug '' "a
-Plug '' "a
 call plug#end()
 
 set encoding=utf-8
