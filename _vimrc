@@ -1,11 +1,24 @@
 call plug#begin()
 "ここにプラグインを書く
-Plug 'Shougo/dein.vim' "プラグインマネージャ。バージョン管理とか？
+Plug 'mattn/emmet-vim'	"emmetのインストール
+Plug 'lervag/vimtex' 	"LaTeX拡張vimtexのインストール
+Plug 'kannokanno/previm' "MarkDownのプレビュー
+Plug 'plasticboy/vim-markdown' "MarkDownの補完とハイライト
+Plug 'tyru/open-browser.vim' "vimでブラウザを開く
 Plug 'Shougo/deoplete.nvim' "補完機能
+Plug 'Shougo/neocomplcache.vim' "補完機能
+Plug 'Shougo/neosnippet.vim' "スニペット補完機能
+Plug 'artur-shaik/vim-javacomplete2' "omni補完 <C-x><C-o>
 Plug 'eclipse/eclipse.jdt.ls' "javaのIDE風にする
-Plug 'autozimi/LanguageClient-neovim' "コード補完、フォーマット、シンタックスチェック、ドキュメント表示、定義元ジャンプ等々
+Plug 'autozimu/LanguageClient-neovim',{
+	\ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+"コード補完、フォーマット、シンタックスチェック、ドキュメント表示、定義元ジャンプ等々
+
 Plug 'w0rp/ale' "非同期のシンタックスチェック
-Plug '' "a
+Plug 'thinca/vim-quickrun' "/rと打つとコンパイルしてくれる
+Plug 'tpope/vim-surround' "括弧とかクォーテーションのサポート
 Plug '' "a
 Plug '' "a
 call plug#end()
@@ -136,6 +149,12 @@ let g:vimtex_view_general_viewer = 'evince' "vimtex<>lvで直接evinceを使用�
 
 "Previmの設定
 let g:previm_open_cmd =''	"vivaldiでプレビューを開く
-"let g:previm_enable_realtime=1 "リアルタイムで反映する
+let g:previm_enable_realtime=1 "リアルタイムで反映する
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown "markdownとしてファイルを設定する
 
+
+"Neosnippetの設定
+let g:neosnippet#snippets_directory= '$HOME/.vim/snippets/'
+
+"javacompleteの設定
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
