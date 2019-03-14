@@ -1,6 +1,6 @@
 call plug#begin()
 "ここにプラグインを書く
-Plug 'mattn/emmet-vim'	"emmetのインストール
+Plug 'mattn/emmet-vim'	"html補完のインストール
 Plug 'lervag/vimtex' 	"LaTeX拡張vimtexのインストール
 Plug 'kannokanno/previm' "MarkDownのプレビュー
 Plug 'plasticboy/vim-markdown' "MarkDownの補完とハイライト
