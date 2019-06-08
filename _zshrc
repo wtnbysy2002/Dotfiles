@@ -3,6 +3,7 @@
 
 # 日本語を使用
 export LANG=ja_JP.UTF-8
+#export LANG=en_US.UTF-8
 
 # パスを追加したい場合
 export PATH="$HOME/bin:$PATH"
@@ -43,6 +44,9 @@ setopt auto_pushd
 
 # pushdから重複を削除
 setopt pushd_ignore_dups
+
+# 表示を詰める
+setopt list_packed
 
 # コマンドミスを修正
 setopt correct
@@ -124,7 +128,7 @@ add-zsh-hook chpwd chpwd_recent_dirs
 
 zstyle ":chpwd:*" recent-dirs-default true
 
-# 複数ファイルのmv 例　zmv *.txt *.txt.bk
+# 複数ファイルのmv 例 zmv *.txt *.txt.bk
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
 
