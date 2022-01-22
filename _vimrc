@@ -19,6 +19,7 @@ set encoding=utf-8
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 
 set nu		"行数を表示"
+set relativenumber	"現在の行数を表示
 set incsearch 	"1文字入力毎に検索を行う"
 set ignorecase	"検索時に大文字小文字を区別しない"
 set smartcase	"検索パターンに大文字を含んでいたら大文字小文字を区別する"
